@@ -1,0 +1,83 @@
+@import url(reset.css);
+.wrap{
+    width: 100%;
+}
+.inner{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+}
+a{
+    color: #fff;
+}
+/* 헤더 */
+.header{
+    padding: 20px 0;
+    color: #fff;
+    background-color: #333;
+}
+.header .inner{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.hamburger{
+    display: none;
+}
+.menu{
+    width: 50%;
+    max-width: 500px;
+    min-width: 365px;
+    display: flex;
+}
+.menu a{
+    width: calc(100% / 4);
+    padding: 10px 0;
+    text-align: center;
+}
+.menu a:hover{
+    background-color: slategray;
+}
+/* 메인 */
+.card-list{
+    padding: 50px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2%;
+    row-gap: 20px;
+}
+.card-list li{
+    width: calc((100% - 6%) / 4);
+    padding: 2%;
+    background-color: #eee;
+
+}
+/* 반응형 */
+@media (max-width:768px){
+    .inner{
+        padding:0 20px;
+    }
+    .menu{
+        display: none;
+    }
+    .hamburger{
+        display: block;
+        font-size: 20px;
+    }
+    .card-list li{
+        width: calc((100% - 4%) / 3);
+    }
+}
+@media (max-width:560px){
+    .card-list{
+        row-gap: 10px;
+    }
+    .card-list li{
+        width: calc((100% - 2%) / 2);
+    }
+}
+@media (max-width:390px){
+    .card-list li{
+        width: 100%;
+    }
+}

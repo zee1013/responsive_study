@@ -1,0 +1,71 @@
+@import url(reset.css);
+.flex-box{
+    margin: auto;
+    width: 100%;
+    max-width: 800px;
+    min-width: 290px;
+    display: flex;
+    flex-wrap: wrap;
+    /* gap: 2%; */
+    column-gap: 2%;
+    row-gap: 20px;
+    background-color: antiquewhite;
+}
+.flex-box li{
+    width: calc((100% - 6%) /4);
+    margin-bottom: 2%;
+}
+.flex-box li a img{
+    width: 100%;
+    display: block;
+}
+.txt{
+    padding: 5%;
+}
+.txt-title{
+    font-size: 24px;
+    font-weight: bold;
+    color: blue;
+}
+span{
+    font-size: 18px;
+}
+/* 반응형 */
+@media (max-width:768px){
+    .flex-box li{
+        width: calc((100% - 4%) /3);
+    }
+    .txt-title{
+        font-size: 22px;
+    }
+}
+@media (max-width:480px){
+    .flex-box{
+        row-gap: 10px;
+    }
+    .flex-box li{
+        width: calc((100% - 2%) /2);
+    }
+    .txt-title{
+        font-size: 20px;
+        color: pink;
+    }
+    span{
+    font-size: 16px;
+}
+}
+@media (max-width:390px){
+    .flex-box{
+        width: 90%;
+    }
+    .flex-box li{
+        width: 100%;
+    }
+    .txt-title{
+        font-size: 18px;
+        color: rgb(187, 104, 117);
+    }
+    span{
+    font-size: 14px;
+}
+}
